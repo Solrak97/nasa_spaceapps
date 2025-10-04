@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c75yt3ifu3tp5"]
+[gd_scene load_steps=5 format=3 uid="uid://dumvtej8mm1l5"]
 
 [ext_resource type="Script" uid="uid://cqsrkpm1488al" path="res://main.gd" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://dy2q6uuivyh1m" path="res://xr_origin_3d.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" path="res://xr_origin_3d.tscn" id="1_ig7tw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
 

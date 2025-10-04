@@ -19,5 +19,14 @@ func _ready():
 		
 	print("checking LLM connection")
 	LLMClient.configure("http://localhost:11434", "", "llama3.2")
-	var resp = await LLMClient.send_prompt("Hey llama, you are being called from godot!")
+	var resp = await LLMClient.send_prompt("Have I called you from godot before?")
 	print(resp)
+
+	# One-time steps.
+	# Pick a voice. Here, we arbitrarily pick the first English voice.
+	var voices = DisplayServer.tts_get_voices_for_language("en")
+	var voice_id = voices[0]
+	
+	DisplayServer.tts_speak(resp, voice_id)
+	DisplayServer.tts_stop()
+	
