@@ -1,4 +1,6 @@
-# NASA Space Apps Challenge - Web Landing Page
+# Deep Ocean - Chifrijo Cósmico
+
+A NASA Space Apps Challenge project exploring the depths of our oceans using cutting-edge VR technology and NASA data.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with TypeScript and Tailwind CSS.
 
@@ -60,8 +62,53 @@ To learn more about Next.js, take a look at the following resources:
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
+### Option 1: Deploy via Git (Recommended)
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Go to [Vercel](https://vercel.com)
+3. Click "Add New Project"
+4. Import your repository
+5. Vercel will auto-detect Next.js and configure everything
+6. Click "Deploy"
+
+### Option 2: Deploy via Vercel CLI
+
+1. Install the Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Login to Vercel:
+```bash
+vercel login
+```
+
+3. Deploy from the project root:
+```bash
+vercel
+```
+
+4. For production deployment:
+```bash
+vercel --prod
+```
+
+### Configuration
+
+The project includes a `vercel.json` configuration file with optimal settings for Next.js deployment.
+
+Your site will be automatically deployed and you'll receive a URL like:
+- `https://your-project-name.vercel.app`
 
 Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Team
+
+**Chifrijo Cósmico**
+- Oscar Quesada Webb - Team Lead & VR Godot Development
+- Luis Carlos Quesada - AI Engineering & Web Development
+- Archibald Emmanuel Carrion Claeys - 3D Mesh Engineering
+- Camila Fariñas - Data Visualization
+- Javier Solano Saltachín - Speech Recognition & LLM Integration
 
 

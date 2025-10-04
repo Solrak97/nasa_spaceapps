@@ -1,6 +1,7 @@
 {
-  "name": "nasa-spaceapps-web",
-  "version": "0.1.0",
+  "name": "deep-ocean-chifrijo-cosmico",
+  "version": "1.0.0",
+  "description": "Deep Ocean - VR ocean exploration using NASA data by Chifrijo Cósmico",
   "private": true,
   "scripts": {
     "dev": "next dev",
