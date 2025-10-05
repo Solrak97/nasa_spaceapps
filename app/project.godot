@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 LLMClient="*res://custom_pluggins/llm_client.gd"
 TTSClient="*res://custom_pluggins/tts_client.gd"
 GenaiAudioPipeline="*res://custom_pluggins/genai_audio_pipeline.gd"
+OceanSpeciesRAG="*res://custom_pluggins/ocean_species_rag.gd"
 
 [editor_plugins]
 
