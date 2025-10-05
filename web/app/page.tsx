@@ -89,7 +89,7 @@ export default function Home() {
                   Immerse yourself in a meticulously crafted virtual ocean environment built using real NASA data and cutting-edge 3D technology. Our virtual world recreates the mysterious depths of the ocean floor with unprecedented accuracy and detail.
                 </p>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Navigate through realistic underwater landscapes, discover hidden geological formations, and witness the beauty of marine ecosystems as you've never seen them before. Every detail is scientifically accurate, providing an educational and awe-inspiring experience.
+                  Navigate through realistic underwater landscapes, discover hidden geological formations, and witness the beauty of marine ecosystems as you&apos;ve never seen them before. Every detail is scientifically accurate, providing an educational and awe-inspiring experience.
                 </p>
                 <Link href="/world" className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all transform hover:scale-105">
                   Explore World
@@ -106,7 +106,7 @@ export default function Home() {
                   The Vital Importance of Our Seas
                 </h3>
                 <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Our oceans cover more than 70% of Earth's surface and are home to countless species that form the foundation of our planet's biodiversity. They regulate climate, produce oxygen, and support millions of livelihoods worldwide.
+                  Our oceans cover more than 70% of Earth&apos;s surface and are home to countless species that form the foundation of our planet&apos;s biodiversity. They regulate climate, produce oxygen, and support millions of livelihoods worldwide.
                 </p>
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                   Through our virtual experience, understand the critical role oceans play in maintaining ecological balance, supporting marine life, and providing essential resources that sustain life on Earth. Discover the interconnected web of life beneath the waves.

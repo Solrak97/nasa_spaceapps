@@ -53,7 +53,7 @@ export default function ClimatePage() {
               The ocean has absorbed more than 90% of the excess heat trapped by greenhouse gases. This warming is not uniform but affects different regions and depths variably, disrupting marine ecosystems that have evolved over millions of years.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              Warmer waters hold less oxygen, creating "dead zones" where marine life struggles to survive. This also increases the frequency and intensity of marine heat waves, causing mass die-offs of fish, corals, and other species.
+              Warmer waters hold less oxygen, creating &ldquo;dead zones&rdquo; where marine life struggles to survive. This also increases the frequency and intensity of marine heat waves, causing mass die-offs of fish, corals, and other species.
             </p>
             <div className="bg-red-900/20 p-4 rounded-lg mt-4">
               <p className="text-red-300 font-semibold">Impact: Coral bleaching, species migration, disrupted food chains</p>
@@ -82,10 +82,10 @@ export default function ClimatePage() {
               <h2 className="text-3xl font-bold text-yellow-400">Ocean Acidification</h2>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              As the ocean absorbs excess CO2 from the atmosphere, it undergoes chemical changes that make it more acidic. The ocean's pH has dropped by 0.1 units since pre-industrial times, representing a 30% increase in acidity.
+              As the ocean absorbs excess CO2 from the atmosphere, it undergoes chemical changes that make it more acidic. The ocean&apos;s pH has dropped by 0.1 units since pre-industrial times, representing a 30% increase in acidity.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              This "other CO2 problem" makes it harder for marine organisms like corals, shellfish, and some plankton to build their calcium carbonate shells and skeletons. This affects the entire marine food web, from tiny pteropods to large fish species.
+              This &ldquo;other CO2 problem&rdquo; makes it harder for marine organisms like corals, shellfish, and some plankton to build their calcium carbonate shells and skeletons. This affects the entire marine food web, from tiny pteropods to large fish species.
             </p>
             <div className="bg-yellow-900/20 p-4 rounded-lg mt-4">
               <p className="text-yellow-300 font-semibold">Impact: Shell dissolution, coral reef degradation, disrupted marine food webs</p>

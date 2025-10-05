@@ -16,7 +16,7 @@ export default function SeasPage() {
             The Vital Importance of Our Seas
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl">
-            Our oceans cover more than 70% of Earth's surface and are the foundation of life on our planet.
+            Our oceans cover more than 70% of Earth&apos;s surface and are the foundation of life on our planet.
           </p>
         </div>
 
@@ -24,11 +24,11 @@ export default function SeasPage() {
         <div className="grid md:grid-cols-4 gap-6 mb-16">
           <div className="bg-gradient-to-br from-blue-900 to-cyan-900 p-6 rounded-xl text-center">
             <div className="text-4xl font-bold mb-2">71%</div>
-            <div className="text-gray-300">Of Earth's Surface</div>
+            <div className="text-gray-300">Of Earth&apos;s Surface</div>
           </div>
           <div className="bg-gradient-to-br from-teal-900 to-blue-900 p-6 rounded-xl text-center">
             <div className="text-4xl font-bold mb-2">97%</div>
-            <div className="text-gray-300">Of Earth's Water</div>
+            <div className="text-gray-300">Of Earth&apos;s Water</div>
           </div>
           <div className="bg-gradient-to-br from-cyan-900 to-blue-900 p-6 rounded-xl text-center">
             <div className="text-4xl font-bold mb-2">50%</div>
@@ -61,7 +61,7 @@ export default function SeasPage() {
               <h2 className="text-3xl font-bold text-teal-400">Climate Regulation</h2>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              Oceans act as the planet's thermostat, absorbing about 30% of carbon dioxide produced by humans and storing heat that would otherwise remain in the atmosphere. This absorption helps buffer the rate of climate change, though it comes at a cost.
+              Oceans act as the planet&apos;s thermostat, absorbing about 30% of carbon dioxide produced by humans and storing heat that would otherwise remain in the atmosphere. This absorption helps buffer the rate of climate change, though it comes at a cost.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
               Ocean currents distribute heat around the globe, influencing weather patterns and climate zones. The Gulf Stream, for example, carries warm water from the tropics to the North Atlantic, moderating the climate of Western Europe.
@@ -74,7 +74,7 @@ export default function SeasPage() {
               <h2 className="text-3xl font-bold text-cyan-400">Oxygen Production</h2>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              Marine plants, particularly phytoplankton, produce approximately 50-80% of the oxygen in Earth's atmosphere. These microscopic organisms are the ocean's invisible forests, conducting photosynthesis on a massive scale.
+              Marine plants, particularly phytoplankton, produce approximately 50-80% of the oxygen in Earth&apos;s atmosphere. These microscopic organisms are the ocean&apos;s invisible forests, conducting photosynthesis on a massive scale.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
               Every second breath you take comes from the ocean. This vital process has been occurring for billions of years, making life on land possible and sustaining it to this day.

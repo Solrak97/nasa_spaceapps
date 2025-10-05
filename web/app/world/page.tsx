@@ -34,7 +34,7 @@ export default function WorldPage() {
             <div className="text-5xl mb-4">🎮</div>
             <h2 className="text-2xl font-bold mb-4 text-purple-400">Immersive VR Experience</h2>
             <p className="text-gray-300 leading-relaxed">
-              Using Godot Engine and OpenXR technology, we've created a fully immersive virtual reality experience. Navigate freely through the depths, interact with the environment, and experience the ocean in ways that were previously impossible.
+              Using Godot Engine and OpenXR technology, we&apos;ve created a fully immersive virtual reality experience. Navigate freely through the depths, interact with the environment, and experience the ocean in ways that were previously impossible.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function WorldPage() {
             <div className="text-5xl mb-4">🔬</div>
             <h2 className="text-2xl font-bold mb-4 text-teal-400">Scientific Accuracy</h2>
             <p className="text-gray-300 leading-relaxed">
-              Every detail in our virtual world is scientifically accurate. From geological formations to lighting effects that simulate different ocean depths, we've worked to ensure an educational experience that doesn't compromise on realism.
+              Every detail in our virtual world is scientifically accurate. From geological formations to lighting effects that simulate different ocean depths, we&apos;ve worked to ensure an educational experience that doesn&apos;t compromise on realism.
             </p>
           </div>
 
