@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://w4d7xubnsoar"]
+
+[ext_resource type="Texture2D" uid="uid://cm2qcf3r3g1mf" path="res://da_sea/seabead_texture.png" id="1_cyjtv"]
+
+[resource]
+albedo_texture = ExtResource("1_cyjtv")

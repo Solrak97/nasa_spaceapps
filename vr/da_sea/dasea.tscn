@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8fgynocrjexh"]
+
+[ext_resource type="Material" uid="uid://w4d7xubnsoar" path="res://da_sea/seabed_texture.tres" id="1_frjf0"]
+[ext_resource type="ArrayMesh" uid="uid://b7k6hmt4nka33" path="res://da_sea/dasea.obj" id="2_wxvtg"]
+
+[node name="Dasea" type="Node3D"]
+
+[node name="Dasea" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1830169, 0, 0.3733542)
+material_override = ExtResource("1_frjf0")
+mesh = ExtResource("2_wxvtg")
