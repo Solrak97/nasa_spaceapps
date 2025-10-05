@@ -1,238 +1,230 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Hero } from './components/Hero';
+import { FeatureCard } from './components/Card';
+import { Section, SectionContainer } from './components/Section';
+import { Resources } from './components/Resources';
+import { DownloadSection } from './components/Download';
+import { TeamGrid } from './components/TeamCard';
+import { Button } from './components/Button';
+import { tw } from './theme';
+import type { TeamMember } from './components/TeamCard';
+
+const teamMembers: TeamMember[] = [
+  {
+    name: 'Oscar Quesada Webb',
+    role: 'Team Lead',
+    icon: '👨‍💻',
+    responsibilities: ['Direction of the project', 'VR Godot development'],
+  },
+  {
+    name: 'Luis Carlos Quesada',
+    role: 'AI Engineer & Web Developer',
+    icon: '🤖',
+    responsibilities: ['AI Engineering', 'Web page development'],
+  },
+  {
+    name: 'Archibald Emmanuel Carrion Claeys',
+    role: '3D Mesh Engineer',
+    icon: '🗺️',
+    responsibilities: ['Generating Godot compatible meshes', 'Digital elevation model data processing', 'NASA data integration'],
+  },
+  {
+    name: 'Camila Fariñas',
+    role: 'Data Visualization Specialist',
+    icon: '🌊',
+    responsibilities: ['Using NASA data to produce ocean renders', 'Coast of Costa Rica visualizations'],
+  },
+  {
+    name: 'Javier Solano Saltachín',
+    role: 'Jr Developer',
+    icon: '🎙️',
+    responsibilities: ['Speech recognition integration', 'LLM integration for VR immersion', 'UX enhancement'],
+  },
+];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white pt-16">
-      {/* Hero Section */}
+    <div className={`min-h-screen ${tw.gradient.background} ${tw.text.primary} pt-16`}>
+      {/* Hero Banner */}
+      <Hero
+        title="Deep Ocean"
+        subtitle="by Chifrijo Cósmico"
+        description="Exploring the depths of our oceans using cutting-edge VR technology and NASA data"
+        variant="centered"
+        size="lg"
+        actions={[
+          { label: 'Download Demo', href: '#download', variant: 'primary' },
+          { label: 'Explore Features', href: '#explore', variant: 'outline' },
+        ]}
+      />
+      
       <main className="container mx-auto px-4 py-16">
-        <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
-          {/* App Logo */}
-          <div className="mb-8">
-            <Image 
-              src="/deep-ocean.png" 
-              alt="Deep Ocean Logo" 
-              width={250} 
-              height={250}
-              className="rounded-lg shadow-2xl"
-            />
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            Deep Ocean
-          </h1>
-          <p className="text-2xl md:text-3xl text-orange-400 mb-6 font-semibold">
-            by Chifrijo Cósmico
-          </p>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl">
-            Exploring the depths of our oceans using cutting-edge VR technology and NASA data
-          </p>
-          <div className="flex gap-4 flex-wrap justify-center">
-            <Link href="/world" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-              Get Started
-            </Link>
-            <Link href="#virtual-spaces" className="px-8 py-3 border border-gray-400 hover:border-gray-300 rounded-lg font-semibold transition-colors">
-              Learn More
-            </Link>
-          </div>
-        </div>
 
         {/* Features Section */}
         <section className="py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+          <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 ${tw.text.primary}`}>
             Features
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-750 transition-colors">
-              <div className="text-4xl mb-4">🌊</div>
-              <h3 className="text-xl font-semibold mb-2">VR Ocean Exploration</h3>
-              <p className="text-gray-400">
-                Immersive virtual reality experience of deep ocean environments
-              </p>
-            </div>
-            <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-750 transition-colors">
-              <div className="text-4xl mb-4">🗺️</div>
-              <h3 className="text-xl font-semibold mb-2">NASA Data Integration</h3>
-              <p className="text-gray-400">
-                Utilizing real elevation models and ocean data from NASA
-              </p>
-            </div>
-            <div className="p-6 bg-gray-800 rounded-lg hover:bg-gray-750 transition-colors">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-semibold mb-2">AI-Powered Experience</h3>
-              <p className="text-gray-400">
-                Speech recognition and LLM integration for enhanced immersion
-              </p>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <FeatureCard
+              icon="🌊"
+              title="VR Ocean Exploration"
+              description="Immersive virtual reality experience of deep ocean environments"
+            />
+            <FeatureCard
+              icon="🗺️"
+              title="NASA Data Integration"
+              description="Utilizing real elevation models and ocean data from NASA"
+            />
+            <FeatureCard
+              icon="🤖"
+              title="AI-Powered Experience"
+              description="Speech recognition and LLM integration for enhanced immersion"
+            />
           </div>
         </section>
 
-        {/* Virtual Spaces Section */}
-        <section id="virtual-spaces" className="py-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
-            Virtual Spaces
+        {/* Explore Sections - Quick Overview */}
+        <section id="explore" className="py-16">
+          <h2 className={`text-3xl md:text-4xl font-bold text-center mb-4 bg-clip-text text-transparent ${tw.gradient.text}`}>
+            Explore Virtual Spaces
           </h2>
+          <p className={`text-center ${tw.text.secondary} mb-12 max-w-2xl mx-auto`}>
+            Discover our scientifically accurate virtual ocean environments
+          </p>
           
-          {/* World Description Section */}
-          <div className="mb-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <div className="h-96 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 rounded-2xl shadow-2xl flex items-center justify-center">
-                  <div className="text-8xl">🌍</div>
-                </div>
-              </div>
-              <div className="order-1 lg:order-2">
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-blue-400">
-                  Explore Our Virtual World
-                </h3>
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Immerse yourself in a meticulously crafted virtual ocean environment built using real NASA data and cutting-edge 3D technology. Our virtual world recreates the mysterious depths of the ocean floor with unprecedented accuracy and detail.
-                </p>
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Navigate through realistic underwater landscapes, discover hidden geological formations, and witness the beauty of marine ecosystems as you&apos;ve never seen them before. Every detail is scientifically accurate, providing an educational and awe-inspiring experience.
-                </p>
-                <Link href="/world" className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all transform hover:scale-105">
-                  Explore World
-                </Link>
-              </div>
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className={`${tw.bg.card} ${tw.border.medium} hover:${tw.border.strong} p-8 rounded-xl text-center transition-all shadow-lg group`}>
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">🌍</div>
+              <h3 className={`text-xl font-bold mb-3 ${tw.text.accent}`}>Virtual World</h3>
+              <p className={`${tw.text.secondary} mb-4 text-sm`}>
+                Explore realistic underwater landscapes built with NASA digital elevation models
+              </p>
+              <Button variant="outline" href="/world" size="sm">
+                Explore →
+              </Button>
             </div>
-          </div>
 
-          {/* Sea Importance Section */}
-          <div className="mb-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-blue-400">
-                  The Vital Importance of Our Seas
-                </h3>
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Our oceans cover more than 70% of Earth&apos;s surface and are home to countless species that form the foundation of our planet&apos;s biodiversity. They regulate climate, produce oxygen, and support millions of livelihoods worldwide.
-                </p>
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Through our virtual experience, understand the critical role oceans play in maintaining ecological balance, supporting marine life, and providing essential resources that sustain life on Earth. Discover the interconnected web of life beneath the waves.
-                </p>
-                <Link href="/seas" className="inline-block px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105">
-                  Learn About Seas
-                </Link>
-              </div>
-              <div>
-                <div className="h-96 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 rounded-2xl shadow-2xl flex items-center justify-center">
-                  <div className="text-8xl">🌊</div>
-                </div>
-              </div>
+            <div className={`${tw.bg.card} ${tw.border.medium} hover:${tw.border.strong} p-8 rounded-xl text-center transition-all shadow-lg group`}>
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">🌊</div>
+              <h3 className={`text-xl font-bold mb-3 ${tw.text.accent}`}>Our Seas</h3>
+              <p className={`${tw.text.secondary} mb-4 text-sm`}>
+                Learn about ocean biodiversity, climate regulation, and vital ecosystem services
+              </p>
+              <Button variant="outline" href="/seas" size="sm">
+                Learn More →
+              </Button>
             </div>
-          </div>
 
-          {/* Climate Change Impact Section */}
-          <div className="mb-20">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                <div className="h-96 bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 rounded-2xl shadow-2xl flex items-center justify-center">
-                  <div className="text-8xl">🔥</div>
-                </div>
-              </div>
-              <div className="order-1 lg:order-2">
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-orange-400">
-                  Climate Change & Ocean Impact
-                </h3>
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  Climate change is dramatically affecting our oceans through rising sea levels, ocean acidification, and increased water temperatures. These changes threaten marine ecosystems and have cascading effects on global weather patterns.
-                </p>
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our virtual experience allows you to witness the effects of climate change on ocean environments, helping you understand the urgency of environmental action. See how rising temperatures and changing conditions impact marine life and coastal communities.
-                </p>
-                <Link href="/climate" className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 rounded-lg font-semibold transition-all transform hover:scale-105">
-                  See Climate Impact
-                </Link>
-              </div>
+            <div className={`${tw.bg.card} ${tw.border.medium} hover:${tw.border.strong} p-8 rounded-xl text-center transition-all shadow-lg group`}>
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">🔥</div>
+              <h3 className={`text-xl font-bold mb-3 ${tw.text.accent}`}>Climate Impact</h3>
+              <p className={`${tw.text.secondary} mb-4 text-sm`}>
+                Understand how climate change is affecting our oceans and marine ecosystems
+              </p>
+              <Button variant="outline" href="/climate" size="sm">
+                See Impact →
+              </Button>
             </div>
           </div>
         </section>
 
-        {/* Team Section */}
+        {/* Download Section - Primary CTA */}
+        <DownloadSection
+          title="Download Deep Ocean VR"
+          subtitle="Immersive Ocean Exploration"
+          description="Experience the depths of the ocean in virtual reality using real NASA data. Compatible with Meta Quest, PC VR headsets, and desktop platforms."
+          comingSoon
+          releaseDate="Demo Coming Soon"
+          downloads={[
+            {
+              platform: 'Meta Quest 2/3',
+              icon: '🥽',
+              comingSoon: true,
+            },
+            {
+              platform: 'PC VR (SteamVR)',
+              icon: '💻',
+              comingSoon: true,
+            },
+            {
+              platform: 'Windows Desktop',
+              icon: '🪟',
+              comingSoon: true,
+            },
+            {
+              platform: 'macOS',
+              icon: '🍎',
+              comingSoon: true,
+            },
+          ]}
+        />
+
+        {/* Team Preview Section */}
         <section id="team" className="py-16">
-          {/* Team Logo */}
-          <div className="flex justify-center mb-8">
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#85c6cf] to-[#e8f3f2] rounded-full blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
             <Image 
               src="/team-logo.jpeg" 
               alt="Chifrijo Cósmico Logo" 
-              width={150} 
-              height={150}
-              className="rounded-full shadow-lg"
-            />
+                  width={120} 
+                  height={120}
+                  className="rounded-full shadow-2xl border-4 border-[#85c6cf]/50 relative z-10"
+                />
+              </div>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${tw.text.primary}`}>
             Meet Our Team
           </h2>
-          <p className="text-xl text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            A passionate group of developers, engineers, and innovators working together to bring ocean exploration to virtual reality
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Team Member 1 */}
-            <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 hover:border-blue-500 transition-all">
-              <div className="text-4xl mb-4">👨‍💻</div>
-              <h3 className="text-xl font-bold mb-2 text-blue-400">Oscar Quesada Webb</h3>
-              <p className="text-sm text-orange-400 mb-3 font-semibold">Team Lead</p>
-              <ul className="text-gray-300 text-sm space-y-1">
-                <li>• Direction of the project</li>
-                <li>• VR Godot development</li>
-              </ul>
-            </div>
-
-            {/* Team Member 2 */}
-            <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 hover:border-blue-500 transition-all">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-xl font-bold mb-2 text-blue-400">Luis Carlos Quesada</h3>
-              <p className="text-sm text-orange-400 mb-3 font-semibold">AI Engineer & Web Developer</p>
-              <ul className="text-gray-300 text-sm space-y-1">
-                <li>• AI Engineering</li>
-                <li>• Web page development</li>
-              </ul>
-            </div>
-
-            {/* Team Member 3 */}
-            <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 hover:border-blue-500 transition-all">
-              <div className="text-4xl mb-4">🗺️</div>
-              <h3 className="text-xl font-bold mb-2 text-blue-400">Archibald Emmanuel Carrion Claeys</h3>
-              <p className="text-sm text-orange-400 mb-3 font-semibold">3D Mesh Engineer</p>
-              <ul className="text-gray-300 text-sm space-y-1">
-                <li>• Generating Godot compatible meshes</li>
-                <li>• Digital elevation model data processing</li>
-                <li>• NASA data integration</li>
-              </ul>
-            </div>
-
-            {/* Team Member 4 */}
-            <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 hover:border-blue-500 transition-all">
-              <div className="text-4xl mb-4">🌊</div>
-              <h3 className="text-xl font-bold mb-2 text-blue-400">Camila Fariñas</h3>
-              <p className="text-sm text-orange-400 mb-3 font-semibold">Data Visualization Specialist</p>
-              <ul className="text-gray-300 text-sm space-y-1">
-                <li>• Using NASA data to produce ocean renders</li>
-                <li>• Coast of Costa Rica visualizations</li>
-              </ul>
-            </div>
-
-            {/* Team Member 5 */}
-            <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 hover:border-blue-500 transition-all">
-              <div className="text-4xl mb-4">🎙️</div>
-              <h3 className="text-xl font-bold mb-2 text-blue-400">Javier Solano Saltachín</h3>
-              <p className="text-sm text-orange-400 mb-3 font-semibold">Jr Developer</p>
-              <ul className="text-gray-300 text-sm space-y-1">
-                <li>• Speech recognition integration</li>
-                <li>• LLM integration for VR immersion</li>
-                <li>• UX enhancement</li>
-              </ul>
-            </div>
+            <p className={`text-lg ${tw.text.secondary} mb-8 max-w-2xl mx-auto`}>
+              A passionate group of developers, engineers, and innovators from Chifrijo Cósmico
+            </p>
+            
+            <TeamGrid members={teamMembers.slice(0, 3)} columns={3} className="max-w-5xl mx-auto mb-8" />
+            
+            <Button variant="outline" href="/team" size="md">
+              View Full Team →
+            </Button>
           </div>
         </section>
+
+        {/* Resources Section */}
+        <Resources
+          title="Project Resources"
+          description="Access our code, documentation, and links"
+          resources={[
+            {
+              title: 'GitHub Repository',
+              description: 'View our source code and contribute to development',
+              url: 'https://github.com/yourusername/deep-ocean',
+              type: 'github',
+              icon: '💻',
+            },
+            {
+              title: 'NASA Space Apps Challenge',
+              description: 'Our official challenge submission page',
+              url: 'https://www.spaceappschallenge.org/',
+              type: 'external',
+              icon: '🚀',
+            },
+            {
+              title: 'NASA Ocean Data',
+              description: 'Datasets and elevation models we used',
+              url: 'https://earthdata.nasa.gov/',
+              type: 'external',
+              icon: '🌊',
+            },
+          ]}
+        />
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-gray-800 py-8">
-        <div className="container mx-auto px-4 text-center text-gray-400">
+      <footer className="border-t border-[#85c6cf]/30 py-8 bg-[#001117]">
+        <div className="container mx-auto px-4 text-center text-[#c5d0cd]">
           <p>&copy; 2025 Chifrijo Cósmico - NASA Space Apps Challenge. All rights reserved.</p>
         </div>
       </footer>

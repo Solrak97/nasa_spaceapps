@@ -1,0 +1,22 @@
+{
+  "name": "Deep Ocean - Chifrijo Cósmico",
+  "short_name": "Deep Ocean",
+  "description": "Exploring the depths of our oceans using cutting-edge VR technology and NASA data",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#001117",
+  "theme_color": "#85c6cf",
+  "icons": [
+    {
+      "src": "/deep-ocean.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/deep-ocean.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
