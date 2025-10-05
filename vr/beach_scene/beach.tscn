@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://35lovdat6ae"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcftvos8so1ib" path="res://beach_scene/beach.obj" id="1_2tsk7"]
+[ext_resource type="Material" uid="uid://m0qrtn8wymjf" path="res://beach_scene/amazing_mangrove_leafs.tres" id="1_rrqik"]
+[ext_resource type="ArrayMesh" uid="uid://f26grt6whpf2" path="res://beach_scene/amazing_mangrove_leafs.obj" id="2_2tsk7"]
+[ext_resource type="Material" uid="uid://dw7kwfe80b8b1" path="res://beach_scene/amazing_mangrove_branchs.tres" id="3_aa64r"]
+[ext_resource type="ArrayMesh" uid="uid://bcfgep8kor5uk" path="res://beach_scene/amazing_manglar_lowerbranch.obj" id="4_jwckh"]
+
+[node name="Beach" type="Node3D"]
+
+[node name="Beach" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.590563, 0, 0, 0, 8.590563, 0, 0, 0, 8.590563, -13.929741, -24.72375, -31.286886)
+mesh = ExtResource("1_2tsk7")
+
+[node name="mangrove_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0984945, 37.7589)
+
+[node name="AmazingMangroveLeafs" type="MeshInstance3D" parent="mangrove_0"]
+transform = Transform3D(0.80849487, 0, 0, 0, 0.7086064, 0, 0, 0, 0.90509945, 1.6523683, 5.412785, -1.3524971)
+material_override = ExtResource("1_rrqik")
+mesh = ExtResource("2_2tsk7")
+skeleton = NodePath("../..")
+
+[node name="AmazingManglarLowerbranch" type="MeshInstance3D" parent="mangrove_0"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.24105072, 0.3152027, -0.8529949)
+material_override = ExtResource("3_aa64r")
+mesh = ExtResource("4_jwckh")
+skeleton = NodePath("../..")
+
+[node name="mangrove_1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.613565, 1.0984945, 37.7589)
+
+[node name="AmazingMangroveLeafs" type="MeshInstance3D" parent="mangrove_1"]
+transform = Transform3D(0.94737655, 0, 0, 0, 0.8303295, 0, 0, 0, 1.0605757, 1.6523685, 6.046393, -1.3524971)
+material_override = ExtResource("1_rrqik")
+mesh = ExtResource("2_2tsk7")
+skeleton = NodePath("../..")
+
+[node name="AmazingManglarLowerbranch" type="MeshInstance3D" parent="mangrove_1"]
+transform = Transform3D(1.3380219, 0, 0, 0, 1.354574, 0, 0, 0, 0.99999994, -0.24105072, 0.3152027, -0.852993)
+material_override = ExtResource("3_aa64r")
+mesh = ExtResource("4_jwckh")
+skeleton = NodePath("../..")
