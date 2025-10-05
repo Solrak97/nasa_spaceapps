@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 LLMClient="*res://custom_pluggins/llm_client.gd"
 TTSClient="*res://custom_pluggins/tts_client.gd"
+GenaiAudioPipeline="*res://custom_pluggins/genai_audio_pipeline.gd"
 
 [editor_plugins]
 
