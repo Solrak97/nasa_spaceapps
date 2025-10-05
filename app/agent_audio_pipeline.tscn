@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cosrjtree4o8l"]
 
-[ext_resource type="Script" uid="uid://det6w53r24is7" path="res://agent_audio_pipeline.gd" id="1_4nuj6"]
+[ext_resource type="Script" uid="uid://br746ds0nge3x" path="res://ocean_vr_agent_example.gd" id="1_4nuj6"]
 
 [node name="AgentAudioPipeline" type="Node3D"]
 script = ExtResource("1_4nuj6")

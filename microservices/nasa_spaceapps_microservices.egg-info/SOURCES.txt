@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+nasa_spaceapps_microservices.egg-info/PKG-INFO
+nasa_spaceapps_microservices.egg-info/SOURCES.txt
+nasa_spaceapps_microservices.egg-info/dependency_links.txt
+nasa_spaceapps_microservices.egg-info/requires.txt
+nasa_spaceapps_microservices.egg-info/top_level.txt
+simple_rag/__init__.py
+simple_rag/app.py
+tts/__init__.py
+tts/app.py

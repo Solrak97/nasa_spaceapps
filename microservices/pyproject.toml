@@ -5,17 +5,24 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "nasa-spaceapps-microservices"
 version = "0.1.0"
-description = "Microservices for NASA Space Apps project"
+description = "Microservices for NASA Space Apps VR Ocean Museum"
 authors = [
     {name = "NASA Space Apps Team"}
 ]
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dependencies = [
-    "fastapi>=0.104.0",
-    "uvicorn[standard]>=0.24.0",
-    "pydantic>=2.0.0",
+    # Core web framework
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.6",
+    "pydantic>=2.9.2",
+    
+    # TTS Service dependencies
     "edge-tts>=6.1.0",
+    
+    # RAG Service dependencies
+    "scikit-learn>=1.5.2",
+    "numpy>=1.26.4",
 ]
 
 [project.optional-dependencies]
