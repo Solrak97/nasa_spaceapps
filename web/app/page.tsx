@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white pt-16">
       {/* Hero Section */}
       <main className="container mx-auto px-4 py-16">
         <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
@@ -27,12 +28,12 @@ export default function Home() {
             Exploring the depths of our oceans using cutting-edge VR technology and NASA data
           </p>
           <div className="flex gap-4 flex-wrap justify-center">
-            <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+            <Link href="/world" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
               Get Started
-            </button>
-            <button className="px-8 py-3 border border-gray-400 hover:border-gray-300 rounded-lg font-semibold transition-colors">
+            </Link>
+            <Link href="#virtual-spaces" className="px-8 py-3 border border-gray-400 hover:border-gray-300 rounded-lg font-semibold transition-colors">
               Learn More
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -67,7 +68,7 @@ export default function Home() {
         </section>
 
         {/* Virtual Spaces Section */}
-        <section className="py-20">
+        <section id="virtual-spaces" className="py-20">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
             Virtual Spaces
           </h2>
@@ -90,9 +91,9 @@ export default function Home() {
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                   Navigate through realistic underwater landscapes, discover hidden geological formations, and witness the beauty of marine ecosystems as you've never seen them before. Every detail is scientifically accurate, providing an educational and awe-inspiring experience.
                 </p>
-                <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all transform hover:scale-105">
+                <Link href="/world" className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all transform hover:scale-105">
                   Explore World
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -110,9 +111,9 @@ export default function Home() {
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                   Through our virtual experience, understand the critical role oceans play in maintaining ecological balance, supporting marine life, and providing essential resources that sustain life on Earth. Discover the interconnected web of life beneath the waves.
                 </p>
-                <button className="px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105">
+                <Link href="/seas" className="inline-block px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105">
                   Learn About Seas
-                </button>
+                </Link>
               </div>
               <div>
                 <div className="h-96 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 rounded-2xl shadow-2xl flex items-center justify-center">
@@ -140,16 +141,16 @@ export default function Home() {
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
                   Our virtual experience allows you to witness the effects of climate change on ocean environments, helping you understand the urgency of environmental action. See how rising temperatures and changing conditions impact marine life and coastal communities.
                 </p>
-                <button className="px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 rounded-lg font-semibold transition-all transform hover:scale-105">
+                <Link href="/climate" className="inline-block px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 rounded-lg font-semibold transition-all transform hover:scale-105">
                   See Climate Impact
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
         {/* Team Section */}
-        <section className="py-16">
+        <section id="team" className="py-16">
           {/* Team Logo */}
           <div className="flex justify-center mb-8">
             <Image 
