@@ -1,0 +1,3 @@
+blender_venv/
+*.bin
+*.npy
