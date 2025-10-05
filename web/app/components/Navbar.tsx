@@ -42,6 +42,9 @@ export default function Navbar() {
             <Link href="/team" className="text-[#c5d0cd] hover:text-[#e8f3f2] transition-colors">
               Team
             </Link>
+            <Link href="/gallery" className="text-[#c5d0cd] hover:text-[#e8f3f2] transition-colors">
+              Gallery
+            </Link>
             <Link 
               href="/#download" 
               className="px-4 py-2 bg-[#85c6cf] hover:bg-[#6ab3be] text-[#001117] rounded-lg font-semibold transition-all transform hover:scale-105 shadow-lg"
@@ -112,6 +115,13 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Team
+              </Link>
+              <Link 
+                href="/gallery" 
+                className="text-[#c5d0cd] hover:text-[#e8f3f2] transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Gallery
               </Link>
               <Link 
                 href="/#download" 

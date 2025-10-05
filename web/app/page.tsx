@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Hero } from './components/Hero';
-import { FeatureCard } from './components/Card';
+import { Card, FeatureCard } from './components/Card';
 import { Section, SectionContainer } from './components/Section';
 import { Resources } from './components/Resources';
 import { DownloadSection } from './components/Download';
@@ -53,6 +53,7 @@ export default function Home() {
         description="Exploring the depths of our oceans using cutting-edge VR technology and NASA data"
         variant="centered"
         size="lg"
+        backgroundImage="/hero-ocean-depths.jpg"
         actions={[
           { label: 'Download Demo', href: '#download', variant: 'primary' },
           { label: 'Explore Features', href: '#explore', variant: 'outline' },
@@ -61,6 +62,39 @@ export default function Home() {
       
       <main className="container mx-auto px-4 py-16">
 
+        {/* Demo Video Showcase */}
+        <section className="py-16 mb-16">
+          <div className="text-center mb-12">
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent ${tw.gradient.text}`}>
+              See It In Action
+            </h2>
+            <p className={`text-lg ${tw.text.secondary} max-w-2xl mx-auto`}>
+              Watch our VR ocean exploration demo in action
+            </p>
+          </div>
+          
+          <Card className="p-0 overflow-hidden max-w-5xl mx-auto">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                controls
+                poster="/hero-ocean-depths.jpg"
+                preload="metadata"
+              >
+                <source src="/game_screenshots/demo-showcase.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className={`p-6 ${tw.bg.card}`}>
+              <h3 className={`text-xl font-bold mb-2 ${tw.text.accent}`}>Deep Ocean VR Demo</h3>
+              <p className={tw.text.secondary}>
+                Experience the immersive underwater world we&apos;ve created using NASA data and cutting-edge VR technology. 
+                Navigate through realistic ocean environments and interact with marine life.
+              </p>
+            </div>
+          </Card>
+        </section>
+
         {/* Features Section */}
         <section className="py-16">
           <h2 className={`text-3xl md:text-4xl font-bold text-center mb-12 ${tw.text.primary}`}>
@@ -68,17 +102,20 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <FeatureCard
-              icon="🌊"
+              image="/vr-diving-underwater.jpg"
+              imageAlt="VR underwater diving experience"
               title="VR Ocean Exploration"
               description="Immersive virtual reality experience of deep ocean environments"
             />
             <FeatureCard
-              icon="🗺️"
+              image="/coral-reef-colorful.jpg"
+              imageAlt="Colorful coral reef with NASA data"
               title="NASA Data Integration"
               description="Utilizing real elevation models and ocean data from NASA"
             />
             <FeatureCard
-              icon="🤖"
+              image="/ai-ocean-guide.jpg"
+              imageAlt="AI-powered ocean guide"
               title="AI-Powered Experience"
               description="Speech recognition and LLM integration for enhanced immersion"
             />
@@ -107,7 +144,14 @@ export default function Home() {
             </div>
 
             <div className={`${tw.bg.card} ${tw.border.medium} hover:${tw.border.strong} p-8 rounded-xl text-center transition-all shadow-lg group`}>
-              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">🌊</div>
+              <div className="relative w-24 h-24 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform ring-2 ring-[#85c6cf]/30">
+                <Image
+                  src="/game_screenshots/marine-biodiversity.jpg"
+                  alt="Marine biodiversity"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h3 className={`text-xl font-bold mb-3 ${tw.text.accent}`}>Our Seas</h3>
               <p className={`${tw.text.secondary} mb-4 text-sm`}>
                 Learn about ocean biodiversity, climate regulation, and vital ecosystem services
@@ -127,6 +171,20 @@ export default function Home() {
                 See Impact →
               </Button>
             </div>
+          </div>
+
+          {/* Gallery Preview */}
+          <div className="mt-12">
+            <Card className="p-8 text-center bg-gradient-to-br from-[#0a1c24] to-[#06141B] border-2 border-[#85c6cf]/40">
+              <div className="text-5xl mb-4">🎨</div>
+              <h3 className={`text-2xl font-bold mb-3 ${tw.text.accent}`}>VR Gallery</h3>
+              <p className={`${tw.text.secondary} mb-6 max-w-xl mx-auto`}>
+                Compare our VR models to real ocean life. See the scientific accuracy behind our 3D recreations.
+              </p>
+              <Button variant="primary" href="/gallery">
+                View Gallery →
+              </Button>
+            </Card>
           </div>
         </section>
 

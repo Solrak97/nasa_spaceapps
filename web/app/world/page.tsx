@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { PageHeader, HeroImageBox } from '../components/Hero';
 import { Card } from '../components/Card';
 import { Button } from '../components/Button';
@@ -9,7 +10,23 @@ export default function WorldPage() {
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="mb-20">
-          <HeroImageBox icon="🌍" size="lg" gradient className="mb-12" />
+          <div className="relative h-96 mb-12 rounded-3xl overflow-hidden shadow-2xl border-2 border-[#85c6cf]/30">
+            <Image
+              src="/coral-reef-colorful.jpg"
+              alt="Virtual ocean world"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#06141B] via-[#06141B]/70 to-transparent"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center px-4">
+                <h1 className={`text-5xl md:text-7xl font-bold mb-4 ${tw.text.primary} drop-shadow-2xl`}>
+                  Virtual Ocean World
+                </h1>
+              </div>
+            </div>
+          </div>
           
           <PageHeader
             title="Explore Our Virtual World"
@@ -21,7 +38,14 @@ export default function WorldPage() {
         {/* Content Sections */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           <Card hover>
-            <div className="text-5xl mb-4">🗺️</div>
+            <div className="relative w-24 h-24 mb-4 rounded-xl overflow-hidden shadow-lg ring-2 ring-[#85c6cf]/30">
+              <Image
+                src="/coral-reef-colorful.jpg"
+                alt="NASA data integration"
+                fill
+                className="object-cover"
+              />
+            </div>
             <h2 className={`text-2xl font-bold mb-4 ${tw.text.accent}`}>NASA Data Integration</h2>
             <p className={`${tw.text.secondary} leading-relaxed`}>
               Our virtual world is built on authentic NASA digital elevation models and bathymetric data. Every underwater mountain, trench, and valley is accurately represented, giving you a scientifically precise view of the ocean floor that few have ever witnessed.
@@ -29,7 +53,14 @@ export default function WorldPage() {
           </Card>
 
           <Card hover>
-            <div className="text-5xl mb-4">🎮</div>
+            <div className="relative w-24 h-24 mb-4 rounded-xl overflow-hidden shadow-lg ring-2 ring-[#85c6cf]/30">
+              <Image
+                src="/vr-diving-underwater.jpg"
+                alt="VR diving experience"
+                fill
+                className="object-cover"
+              />
+            </div>
             <h2 className={`text-2xl font-bold mb-4 ${tw.text.accent}`}>Immersive VR Experience</h2>
             <p className={`${tw.text.secondary} leading-relaxed`}>
               Using Godot Engine and OpenXR technology, we&apos;ve created a fully immersive virtual reality experience. Navigate freely through the depths, interact with the environment, and experience the ocean in ways that were previously impossible.
@@ -37,7 +68,14 @@ export default function WorldPage() {
           </Card>
 
           <Card hover>
-            <div className="text-5xl mb-4">🔬</div>
+            <div className="relative w-24 h-24 mb-4 rounded-xl overflow-hidden shadow-lg ring-2 ring-[#85c6cf]/30">
+              <Image
+                src="/jellyfish-bioluminescent.jpg"
+                alt="Scientific accuracy"
+                fill
+                className="object-cover"
+              />
+            </div>
             <h2 className={`text-2xl font-bold mb-4 ${tw.text.accent}`}>Scientific Accuracy</h2>
             <p className={`${tw.text.secondary} leading-relaxed`}>
               Every detail in our virtual world is scientifically accurate. From geological formations to lighting effects that simulate different ocean depths, we&apos;ve worked to ensure an educational experience that doesn&apos;t compromise on realism.
@@ -45,7 +83,14 @@ export default function WorldPage() {
           </Card>
 
           <Card hover>
-            <div className="text-5xl mb-4">🌊</div>
+            <div className="relative w-24 h-24 mb-4 rounded-xl overflow-hidden shadow-lg ring-2 ring-[#85c6cf]/30">
+              <Image
+                src="/sea-turtle-swimming.jpg"
+                alt="Dynamic ocean environment"
+                fill
+                className="object-cover"
+              />
+            </div>
             <h2 className={`text-2xl font-bold mb-4 ${tw.text.accent}`}>Dynamic Environments</h2>
             <p className={`${tw.text.secondary} leading-relaxed`}>
               Experience dynamic underwater environments with realistic physics, water effects, and atmospheric conditions. Our world responds to your presence, creating an engaging and lifelike simulation of ocean exploration.
@@ -87,6 +132,24 @@ export default function WorldPage() {
             </div>
           </div>
         </Card>
+
+        {/* Video Showcase */}
+        <div className="mb-16">
+          <h2 className={`text-3xl font-bold text-center mb-8 ${tw.text.primary}`}>Watch Our Demo</h2>
+          <Card className="p-0 overflow-hidden">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                controls
+                poster="/coral-reef-colorful.jpg"
+                preload="metadata"
+              >
+                <source src="/game_screenshots/demo-showcase.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </Card>
+        </div>
 
         {/* Call to Action */}
         <div className="text-center">

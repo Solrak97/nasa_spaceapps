@@ -2,6 +2,57 @@
 
 Reusable themed components for the Deep Ocean project.
 
+## 🎥 VideoShowcase Component
+
+Displays video content with optional title and description in a responsive player.
+
+### Props
+- `videoSrc` (string, required): Path to video file
+- `posterImage` (string): Thumbnail image shown before play
+- `title` (string): Optional title below video
+- `description` (string): Optional description
+- `className` (string): Additional CSS classes
+
+### Example
+```tsx
+<VideoShowcase
+  videoSrc="/game_screenshots/demo-showcase.mp4"
+  posterImage="/hero-ocean-depths.jpg"
+  title="Deep Ocean VR Demo"
+  description="Experience our immersive VR world"
+/>
+```
+
+### VideoHero Component
+
+Full-width autoplay video banner with overlay text (ideal for hero sections).
+
+### Props
+- `videoSrc` (string, required): Path to video file
+- `title` (string, required): Main title overlay
+- `subtitle` (string): Optional subtitle
+- `posterImage` (string): Fallback image
+- `className` (string): Additional CSS classes
+
+### Example
+```tsx
+<VideoHero
+  videoSrc="/game_screenshots/demo-showcase.mp4"
+  title="Deep Ocean VR"
+  subtitle="Explore the depths"
+  posterImage="/hero-ocean-depths.jpg"
+/>
+```
+
+### Features
+- 16:9 aspect ratio (responsive)
+- Custom poster images
+- Styled with theme
+- Accessible controls
+- Preload metadata for performance
+
+---
+
 ## 🎯 Hero Component
 
 The Hero component is perfect for landing pages and major section headers.

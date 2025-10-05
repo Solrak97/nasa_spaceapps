@@ -87,10 +87,10 @@ export default function TeamPage() {
           <p className={`${tw.text.secondary} leading-relaxed mb-4`}>
             We are a multidisciplinary team united by our passion for ocean exploration and cutting-edge technology. 
             Our project combines expertise in VR development, AI engineering, 3D visualization, and data science to create 
-            an immersive educational experience about our planet's oceans.
+            an immersive educational experience about our planet&apos;s oceans.
           </p>
           <p className={`${tw.text.secondary} leading-relaxed`}>
-            Participating in the NASA Space Apps Challenge 2025, we're committed to using real scientific data 
+            Participating in the NASA Space Apps Challenge 2025, we&apos;re committed to using real scientific data 
             to raise awareness about ocean conservation and the impacts of climate change.
           </p>
         </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { PageHeader, HeroImageBox } from '../components/Hero';
 import { StatsGrid } from '../components/StatCard';
 import { Card } from '../components/Card';
@@ -10,7 +11,23 @@ export default function SeasPage() {
       <main className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="mb-20">
-          <HeroImageBox icon="🌊" size="lg" gradient className="mb-12" />
+          <div className="relative h-96 mb-12 rounded-3xl overflow-hidden shadow-2xl border-2 border-[#85c6cf]/30">
+            <Image
+              src="/game_screenshots/marine-biodiversity.jpg"
+              alt="Ocean biodiversity"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#06141B] via-[#06141B]/70 to-transparent"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center px-4">
+                <h1 className={`text-5xl md:text-7xl font-bold mb-4 ${tw.text.primary} drop-shadow-2xl`}>
+                  Our Living Seas
+                </h1>
+              </div>
+            </div>
+          </div>
           
           <PageHeader
             title="The Vital Importance of Our Seas"
@@ -35,7 +52,14 @@ export default function SeasPage() {
         <div className="space-y-8 mb-16">
           <Card>
             <div className="flex items-center gap-4 mb-4">
-              <div className="text-5xl">🐠</div>
+              <div className="relative w-20 h-20 rounded-xl overflow-hidden shadow-lg ring-2 ring-[#85c6cf]/30">
+                <Image
+                  src="/sea-turtle-swimming.jpg"
+                  alt="Marine biodiversity"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <h2 className={`text-3xl font-bold ${tw.text.accent}`}>Biodiversity Hotspot</h2>
             </div>
             <p className={`${tw.text.primary} text-lg leading-relaxed mb-4`}>
