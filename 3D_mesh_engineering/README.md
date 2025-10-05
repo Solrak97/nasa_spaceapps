@@ -68,6 +68,11 @@ blender --background --python-expr "import sys; print(sys.executable)"
 pip install elevation rasterio numpy scipy
 ```
 
+The elevatuibn library needs [GDAL](https://gdal.org/en/stable/) tool
+```bash
+sudo apt install gdal-bin
+```
+
 ### Step 3: Download Script (60% → 70%)
 
 ```bash
