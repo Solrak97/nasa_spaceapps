@@ -11,19 +11,18 @@ config_version=5
 [application]
 
 config/name="VR Ejemplo"
-run/main_scene="uid://c75yt3ifu3tp5"
+run/main_scene="uid://dumvtej8mm1l5"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
-XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
 LLMClient="*res://custom_pluggins/llm_client.gd"
+TTSClient="*res://custom_pluggins/tts_client.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+enabled=PackedStringArray()
 
 [xr]
 

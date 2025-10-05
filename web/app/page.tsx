@@ -66,6 +66,88 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Virtual Spaces Section */}
+        <section className="py-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+            Virtual Spaces
+          </h2>
+          
+          {/* World Description Section */}
+          <div className="mb-20">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="h-96 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 rounded-2xl shadow-2xl flex items-center justify-center">
+                  <div className="text-8xl">🌍</div>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-blue-400">
+                  Explore Our Virtual World
+                </h3>
+                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                  Immerse yourself in a meticulously crafted virtual ocean environment built using real NASA data and cutting-edge 3D technology. Our virtual world recreates the mysterious depths of the ocean floor with unprecedented accuracy and detail.
+                </p>
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                  Navigate through realistic underwater landscapes, discover hidden geological formations, and witness the beauty of marine ecosystems as you've never seen them before. Every detail is scientifically accurate, providing an educational and awe-inspiring experience.
+                </p>
+                <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all transform hover:scale-105">
+                  Explore World
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Sea Importance Section */}
+          <div className="mb-20">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-blue-400">
+                  The Vital Importance of Our Seas
+                </h3>
+                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                  Our oceans cover more than 70% of Earth's surface and are home to countless species that form the foundation of our planet's biodiversity. They regulate climate, produce oxygen, and support millions of livelihoods worldwide.
+                </p>
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                  Through our virtual experience, understand the critical role oceans play in maintaining ecological balance, supporting marine life, and providing essential resources that sustain life on Earth. Discover the interconnected web of life beneath the waves.
+                </p>
+                <button className="px-6 py-3 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 rounded-lg font-semibold transition-all transform hover:scale-105">
+                  Learn About Seas
+                </button>
+              </div>
+              <div>
+                <div className="h-96 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 rounded-2xl shadow-2xl flex items-center justify-center">
+                  <div className="text-8xl">🌊</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Climate Change Impact Section */}
+          <div className="mb-20">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="h-96 bg-gradient-to-br from-red-900 via-orange-900 to-yellow-900 rounded-2xl shadow-2xl flex items-center justify-center">
+                  <div className="text-8xl">🔥</div>
+                </div>
+              </div>
+              <div className="order-1 lg:order-2">
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-orange-400">
+                  Climate Change & Ocean Impact
+                </h3>
+                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+                  Climate change is dramatically affecting our oceans through rising sea levels, ocean acidification, and increased water temperatures. These changes threaten marine ecosystems and have cascading effects on global weather patterns.
+                </p>
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                  Our virtual experience allows you to witness the effects of climate change on ocean environments, helping you understand the urgency of environmental action. See how rising temperatures and changing conditions impact marine life and coastal communities.
+                </p>
+                <button className="px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 rounded-lg font-semibold transition-all transform hover:scale-105">
+                  See Climate Impact
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Team Section */}
         <section className="py-16">
           {/* Team Logo */}
@@ -156,5 +238,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 

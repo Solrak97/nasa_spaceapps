@@ -112,3 +112,4 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - Javier Solano Saltachín - Speech Recognition & LLM Integration
 
 
+
