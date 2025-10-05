@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://m0qrtn8wymjf"]
+
+[ext_resource type="Texture2D" uid="uid://lo62lhaosom0" path="res://beach_scene/best_mangrove_ever_leaf_texture.png" id="1_m3610"]
+
+[resource]
+albedo_texture = ExtResource("1_m3610")
