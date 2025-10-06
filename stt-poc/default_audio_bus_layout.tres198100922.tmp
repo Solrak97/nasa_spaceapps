@@ -1,0 +1,18 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://bxt72vt56kkoo"]
+
+[ext_resource type="Script" uid="uid://bx81d8wfbql6g" path="res://stt_recognizer.gd" id="1_fgos4"]
+
+[sub_resource type="AudioEffectCapture" id="AudioEffectCapture_4mdrb"]
+resource_name = "Capture"
+buffer_length = 1.0
+script = ExtResource("1_fgos4")
+
+[resource]
+bus/1/name = &"Record"
+bus/1/solo = false
+bus/1/mute = true
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectCapture_4mdrb")
+bus/1/effect/0/enabled = true

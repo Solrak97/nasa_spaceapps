@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba51v1padsp06"]
+
+[ext_resource type="Script" uid="uid://bx81d8wfbql6g" path="res://stt_recognizer.gd" id="1_ig7tw"]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_ig7tw"]
+mix_rate_mode = 1
+mix_rate = 16000.0
+buffer_length = 3.0
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_ig7tw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node" type="Node" parent="." node_paths=PackedStringArray("resample_stream_player")]
+script = ExtResource("1_ig7tw")
+websocket_url = "ws://192.168.100.126:8000/asr"
+resample_stream_player = NodePath("../ResampleStreamPlayer")
+
+[node name="ResampleStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamGenerator_ig7tw")
+autoplay = true
+bus = &"Resample"
+playback_type = 1
+
+[node name="MicStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamMicrophone_ig7tw")
+autoplay = true
+bus = &"Record"
